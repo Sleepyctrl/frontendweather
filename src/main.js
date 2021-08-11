@@ -17,8 +17,8 @@ new Vue({
   },
   mounted () {
     axios
-      .get(devServer)
-      .then(response => this.alldata)
+      .get('https://localhost:44306/api/values')
+      .then(response => { this.alldata = response })
   },
   router,
   store,
